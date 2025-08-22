@@ -48,32 +48,32 @@ body {
 
 /* Custom cursors with debugging */
 * {
-  cursor: url('/cursor.cur'), auto;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), auto;
 }
 
 /* Alternative cursor approach using PNG */
 .cursor-png {
-  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.png'), auto;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.png') 16 16, auto;
 }
 
 /* Force cursor with !important */
 .cursor-force {
-  cursor: url('/cursor.cur') !important;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur') !important;
 }
 
 /* Pointer cursor for clickable elements */
 button, a, input, .group, [role="button"], [tabindex] {
-  cursor: url('/cursor.cur'), pointer;
+  cursor: url('/School Calculator & Math Formula Animated--pointer--SweezyCursors.cur'), pointer;
 }
 
 /* Text cursor for input fields */
 input[type="text"], input[type="number"], textarea {
-  cursor: url('/cursor.cur'), text;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), text;
 }
 
 /* Resize cursors */
 textarea {
-  cursor: url('/cursor.cur'), auto;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), auto;
 }
 
 /* Custom scrollbar */
@@ -225,21 +225,21 @@ input::placeholder {
 /* Enhanced cursor styles for different states */
 /* Loading state */
 .loading {
-  cursor: url('/cursor.cur'), wait;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), wait;
 }
 
 /* Disabled state */
 button:disabled, input:disabled {
-  cursor: url('/cursor.cur'), not-allowed;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), not-allowed;
 }
 
 /* Drag and drop */
 [draggable="true"] {
-  cursor: url('/cursor.cur'), grab;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), grab;
 }
 
 [draggable="true"]:active {
-  cursor: url('/cursor.cur'), grabbing;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), grabbing;
 }
 
 /* Selection cursor */
@@ -264,29 +264,29 @@ button:disabled, input:disabled {
 
 /* Debug cursor styles - remove these after testing */
 .debug-cursor {
-  cursor: url('/cursor.cur'), auto !important;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), auto !important;
 }
 
 .debug-pointer {
-  cursor: url('/cursor.cur'), pointer !important;
+  cursor: url('/School Calculator & Math Formula Animated--pointer--SweezyCursors.cur'), pointer !important;
 }
 
 /* Alternative cursor approach using data attributes */
 [data-cursor="pointer"] {
-  cursor: url('/cursor.cur'), pointer;
+  cursor: url('/School Calculator & Math Formula Animated--pointer--SweezyCursors.cur'), pointer;
 }
 
 [data-cursor="text"] {
-  cursor: url('/cursor.cur'), text;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), text;
 }
 
 [data-cursor="default"] {
-  cursor: url('/cursor.cur'), auto;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), auto;
 }
 
 /* Math calculator specific cursor enhancements */
 .calculator-button {
-  cursor: url('/cursor.cur'), pointer;
+  cursor: url('/School Calculator & Math Formula Animated--pointer--SweezyCursors.cur'), pointer;
   transition: all 0.2s ease;
 }
 
@@ -300,20 +300,20 @@ button:disabled, input:disabled {
 
 /* Formula display area */
 .formula-display {
-  cursor: url('/cursor.cur'), text;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), text;
 }
 
 /* Math symbols and operators */
 .math-operator {
-  cursor: url('/cursor.cur'), pointer;
+  cursor: url('/School Calculator & Math Formula Animated--pointer--SweezyCursors.cur'), pointer;
 }
 
 /* Number input fields */
 .number-input {
-  cursor: url('/cursor.cur'), text;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), text;
 }
 
 /* Result display */
 .result-display {
-  cursor: url('/cursor.cur'), default;
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.cur'), default;
 }
