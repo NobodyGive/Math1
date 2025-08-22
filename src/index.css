@@ -294,7 +294,7 @@ input::placeholder {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 3px solid transparent;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
@@ -319,10 +319,10 @@ input::placeholder {
 
 .panel-rainbow-static:hover {
   border: 3px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(90deg, 
-                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
-                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background: rgba(0, 0, 0, 0.8);
+  border-image: linear-gradient(90deg, 
+    #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+    #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) 1;
   background-size: 200% 100%;
   transform: translateY(-2px);
   box-shadow: 
@@ -337,10 +337,10 @@ input::placeholder {
 
 .panel-rainbow-static.active {
   border: 3px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(90deg, 
-                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
-                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background: rgba(0, 0, 0, 0.8);
+  border-image: linear-gradient(90deg, 
+    #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+    #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) 1;
   background-size: 200% 100%;
   transform: translateY(-1px);
   box-shadow: 
@@ -354,7 +354,7 @@ input::placeholder {
 }
 
 .panel-rainbow-static.active::before {
-  opacity: 0.15;
+  opacity: 0.05;
 }
 
 /* Enhanced cursor styles for different states */
