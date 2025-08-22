@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Custom cursors with debugging */
+* {
+  cursor: url('/cursor.cur'), auto;
+}
+
+/* Alternative cursor approach using PNG */
+.cursor-png {
+  cursor: url('/School Calculator & Math Formula Animated--cursor--SweezyCursors.png'), auto;
+}
+
+/* Force cursor with !important */
+.cursor-force {
+  cursor: url('/cursor.cur') !important;
+}
+
+/* Pointer cursor for clickable elements */
+button, a, input, .group, [role="button"], [tabindex] {
+  cursor: url('/cursor.cur'), pointer;
+}
+
+/* Text cursor for input fields */
+input[type="text"], input[type="number"], textarea {
+  cursor: url('/cursor.cur'), text;
+}
+
+/* Resize cursors */
+textarea {
+  cursor: url('/cursor.cur'), auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced glow effects */
+.hover\:shadow-white:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.focus\:shadow-white:focus {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, .group {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced backdrop blur */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Custom input styles */
+input::placeholder {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-8xl {
+    font-size: 4rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+}
+
+/* Rainbow UI Effects */
+@keyframes rainbow-border-glow {
+  0% {
+    border-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+  }
+  16.66% {
+    border-color: #ff8000;
+    box-shadow: 0 0 15px rgba(255, 128, 0, 0.6), 0 0 30px rgba(255, 128, 0, 0.4);
+  }
+  33.33% {
+    border-color: #ffff00;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
+  }
+  50% {
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
+  }
+  66.66% {
+    border-color: #0080ff;
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.6), 0 0 30px rgba(0, 128, 255, 0.4);
+  }
+  83.33% {
+    border-color: #8000ff;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.6), 0 0 30px rgba(128, 0, 255, 0.4);
+  }
+  100% {
+    border-color: #ff0080;
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.6), 0 0 30px rgba(255, 0, 128, 0.4);
+  }
+}
+
+@keyframes subtle-rainbow-bg {
+  0% {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 128, 0, 0.05));
+  }
+  16.66% {
+    background: linear-gradient(135deg, rgba(255, 128, 0, 0.1), rgba(255, 255, 0, 0.05));
+  }
+  33.33% {
+    background: linear-gradient(135deg, rgba(255, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 128, 255, 0.05));
+  }
+  66.66% {
+    background: linear-gradient(135deg, rgba(0, 128, 255, 0.1), rgba(128, 0, 255, 0.05));
+  }
+  83.33% {
+    background: linear-gradient(135deg, rgba(128, 0, 255, 0.1), rgba(255, 0, 128, 0.05));
+  }
+  100% {
+    background: linear-gradient(135deg, rgba(255, 0, 128, 0.1), rgba(255, 0, 0, 0.05));
+  }
+}
+
+.rainbow-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  border-radius: 12px;
+}
+
+.rainbow-hover:hover {
+  animation: rainbow-border-glow 3s linear infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.rainbow-active {
+  animation: subtle-rainbow-bg 4s ease infinite, rainbow-border-glow 3s linear infinite;
+  border: 2px solid;
+  border-radius: 12px;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Panel-specific rainbow styles */
+.panel-rainbow {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.panel-rainbow:hover {
+  animation: rainbow-border-glow 3s linear infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.panel-rainbow.active {
+  animation: subtle-rainbow-bg 4s ease infinite, rainbow-border-glow 3s linear infinite;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Static Rainbow Effects - All colors simultaneously */
+.rainbow-border-static {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, 
+                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background-size: 200% 100%;
+  filter: blur(0.5px);
+}
+
+.rainbow-border-static:hover {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, 
+                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background-size: 200% 100%;
+  filter: blur(0.5px);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.4),
+    0 0 40px rgba(255, 128, 0, 0.3),
+    0 0 60px rgba(255, 255, 0, 0.2),
+    0 0 80px rgba(0, 255, 0, 0.1),
+    0 0 100px rgba(0, 128, 255, 0.1),
+    0 0 120px rgba(128, 0, 255, 0.1),
+    0 0 140px rgba(255, 0, 128, 0.1);
+  transform: translateY(-2px);
+}
+
+.rainbow-bg-static {
+  background: linear-gradient(135deg,
+    rgba(255, 0, 0, 0.08),      /* Red */
+    rgba(255, 128, 0, 0.08),    /* Orange */
+    rgba(255, 255, 0, 0.08),    /* Yellow */
+    rgba(0, 255, 0, 0.08),      /* Green */
+    rgba(0, 128, 255, 0.08),    /* Blue */
+    rgba(128, 0, 255, 0.08),    /* Indigo */
+    rgba(255, 0, 128, 0.08)     /* Violet */
+  );
+  backdrop-filter: blur(8px);
+}
+
+.rainbow-bg-static:hover {
+  background: linear-gradient(135deg,
+    rgba(255, 0, 0, 0.12),      /* Red */
+    rgba(255, 128, 0, 0.12),    /* Orange */
+    rgba(255, 255, 0, 0.12),    /* Yellow */
+    rgba(0, 255, 0, 0.12),      /* Green */
+    rgba(0, 128, 255, 0.12),    /* Blue */
+    rgba(128, 0, 255, 0.12),    /* Indigo */
+    rgba(255, 0, 128, 0.12)     /* Violet */
+  );
+}
+
+/* Enhanced panel styles with static rainbow effects */
+.panel-rainbow-static {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.panel-rainbow-static::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+    #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.panel-rainbow-static:hover {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, 
+                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background-size: 200% 100%;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.4),
+    0 0 40px rgba(255, 128, 0, 0.3),
+    0 0 60px rgba(255, 255, 0, 0.2),
+    0 0 80px rgba(0, 255, 0, 0.1),
+    0 0 100px rgba(0, 128, 255, 0.1),
+    0 0 120px rgba(128, 0, 255, 0.1),
+    0 0 140px rgba(255, 0, 128, 0.1);
+}
+
+.panel-rainbow-static.active {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, 
+                #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, 
+                #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000) border-box;
+  background-size: 200% 100%;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.4),
+    0 0 40px rgba(255, 128, 0, 0.3),
+    0 0 60px rgba(255, 255, 0, 0.2),
+    0 0 80px rgba(0, 255, 0, 0.1),
+    0 0 100px rgba(0, 128, 255, 0.1),
+    0 0 120px rgba(128, 0, 255, 0.1),
+    0 0 140px rgba(255, 0, 128, 0.1);
+}
+
+.panel-rainbow-static.active::before {
+  opacity: 0.15;
+}
+
+/* Enhanced cursor styles for different states */
+/* Loading state */
+.loading {
+  cursor: url('/cursor.cur'), wait;
+}
+
+/* Disabled state */
+button:disabled, input:disabled {
+  cursor: url('/cursor.cur'), not-allowed;
+}
+
+/* Drag and drop */
+[draggable="true"] {
+  cursor: url('/cursor.cur'), grab;
+}
+
+[draggable="true"]:active {
+  cursor: url('/cursor.cur'), grabbing;
+}
+
+/* Selection cursor */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fallback cursors for better browser compatibility */
+@supports not (cursor: url()) {
+  * {
+    cursor: auto;
+  }
+  
+  button, a, input, .group, [role="button"], [tabindex] {
+    cursor: pointer;
+  }
+  
+  input[type="text"], input[type="number"], textarea {
+    cursor: text;
+  }
+}
+
+/* Debug cursor styles - remove these after testing */
+.debug-cursor {
+  cursor: url('/cursor.cur'), auto !important;
+}
+
+.debug-pointer {
+  cursor: url('/cursor.cur'), pointer !important;
+}
+
+/* Alternative cursor approach using data attributes */
+[data-cursor="pointer"] {
+  cursor: url('/cursor.cur'), pointer;
+}
+
+[data-cursor="text"] {
+  cursor: url('/cursor.cur'), text;
+}
+
+[data-cursor="default"] {
+  cursor: url('/cursor.cur'), auto;
+}
+
+/* Math calculator specific cursor enhancements */
+.calculator-button {
+  cursor: url('/cursor.cur'), pointer;
+  transition: all 0.2s ease;
+}
+
+.calculator-button:hover {
+  transform: scale(1.05);
+}
+
+.calculator-button:active {
+  transform: scale(0.95);
+}
+
+/* Formula display area */
+.formula-display {
+  cursor: url('/cursor.cur'), text;
+}
+
+/* Math symbols and operators */
+.math-operator {
+  cursor: url('/cursor.cur'), pointer;
+}
+
+/* Number input fields */
+.number-input {
+  cursor: url('/cursor.cur'), text;
+}
+
+/* Result display */
+.result-display {
+  cursor: url('/cursor.cur'), default;
+}
